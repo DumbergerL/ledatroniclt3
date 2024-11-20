@@ -151,6 +151,11 @@ class LedatronicTemperatureSensor(Entity):
         self.comm = comm
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
+
+    @property
     def name(self):
         """Return the name of this sensor."""
         return "ledatronic_temp"
@@ -181,6 +186,11 @@ class LedatronicStateSensor(Entity):
         self.comm = comm
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
+
+    @property
     def name(self):
         """Return the name of this sensor."""
         return "ledatronic_state"
@@ -204,6 +214,11 @@ class LedatronicValveSensor(Entity):
     def __init__(self, comm):
         """Initialize the sensor."""
         self.comm = comm
+
+    @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
 
     @property
     def name(self):
@@ -241,6 +256,11 @@ class LedatronicMaxTemp(Entity):
         self.comm = comm
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
+
+    @property
     def name(self):
         """Return the name of this sensor."""
         return "ledatronic_maxtemp"
@@ -269,6 +289,11 @@ class LedatronicGrundglut(Entity):
     def __init__(self, comm):
         """Initialize the sensor."""
         self.comm = comm
+
+    @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
 
     @property
     def name(self):
@@ -301,6 +326,11 @@ class LedatronicTrend(Entity):
         self.comm = comm
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
+
+    @property
     def name(self):
         """Return the name of this sensor."""
         return "ledatronic_trend"
@@ -324,6 +354,11 @@ class LedatronicAbbrande(Entity):
     def __init__(self, comm):
         """Initialize the sensor."""
         self.comm = comm
+
+    @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
 
     @property
     def name(self):
@@ -351,6 +386,11 @@ class LedatronicHeizfehler(Entity):
         self.comm = comm
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
+
+    @property
     def name(self):
         """Return the name of this sensor."""
         return "ledatronic_heizfehler"
@@ -374,6 +414,11 @@ class LedatronicPufferUnten(Entity):
     def __init__(self, comm):
         """Initialize the sensor."""
         self.comm = comm
+
+    @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
 
     @property
     def name(self):
@@ -406,6 +451,11 @@ class LedatronicPufferOben(Entity):
         self.comm = comm
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
+
+    @property
     def name(self):
         """Return the name of this sensor."""
         return "ledatronic_puffer_oben"
@@ -434,6 +484,11 @@ class LedatronicVorlaufTemp(Entity):
     def __init__(self, comm):
         """Initialize the sensor."""
         self.comm = comm
+
+    @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
 
     @property
     def name(self):
@@ -466,6 +521,11 @@ class LedatronicSchornTemp(Entity):
         self.comm = comm
 
     @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
+
+    @property
     def name(self):
         """Return the name of this sensor."""
         return "ledatronic_schorn_temp"
@@ -473,7 +533,7 @@ class LedatronicSchornTemp(Entity):
     @property
     def state(self):
         """Return the current state of the entity."""
-        return self.comm.schorn_temp
+        return self.comm.schorn_temp / 100
 
     @property
     def unit_of_measurement(self):
@@ -494,6 +554,11 @@ class LedatronicVentilator(Entity):
     def __init__(self, comm):
         """Initialize the sensor."""
         self.comm = comm
+
+    @property
+    def unique_id(self):
+        """Return a unique ID."""
+        return "lt3_" + self.name
 
     @property
     def name(self):
